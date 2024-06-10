@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun deleteProductTest()" project="ProductManagement" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.product.ProductAppRepoTest" time="0.427" displayname="ProductAppRepoTest" uniqueid="[engine:junit-jupiter]/[class:com.product.ProductAppRepoTest]">
+    <testcase name="deleteProductTest" classname="com.product.ProductAppRepoTest" time="0.427" displayname="deleteProductTest()" uniqueid="[engine:junit-jupiter]/[class:com.product.ProductAppRepoTest]/[method:deleteProductTest()]"/>
+  </testsuite>
+</testrun>

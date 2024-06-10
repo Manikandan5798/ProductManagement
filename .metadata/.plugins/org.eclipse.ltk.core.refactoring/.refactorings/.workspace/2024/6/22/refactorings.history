@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;spring-boot-jpa-h2&apos; to &apos;ToDoApplication&apos;&#x0D;&#x0A;- Original element: &apos;spring-boot-jpa-h2&apos;&#x0D;&#x0A;- Renamed element: &apos;spring-boot-jpa-h2&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;spring-boot-jpa-h2&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=spring-boot-jpa-h2" name="ToDoApplication" references="true" stamp="1717214361060" version="1.0"/>
+</session>

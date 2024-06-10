@@ -1,0 +1,72 @@
+package com.example.demo;
+
+import java.util.Optional;
+
+import org.assertj.core.api.Assertions;
+import org.hamcrest.core.IsEqual;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.product.model.Product;
+import com.product.repository.ProductRepo;
+
+@DataJpaTest
+public class ProductRepoTest {
+	
+	@Autowired
+	public ProductRepo productRepo;
+	
+	//Junit test for saveProduct
+	
+	public void saveProductTest() {
+		
+		Product prod = new Product();
+		prod.setProductId(1L);
+		prod.setProductName("Earbuds");
+		prod.setPrice(2500L);
+		productRepo.save(prod);
+		Assertions.assertThat(prod.getProductId()).isGreaterThan(0);
+	}
+	
+
+	public void getProductTest() {
+
+		Product prod = new Product();
+		prod.setProductId(1L);
+		prod.setProductName("Earbuds");
+		prod.setPrice(2500L);
+		productRepo.save(prod);
+		Product prod1 = productRepo.findById(1L).get();
+		Assertions.assertThat(prod1.getProductId()).isEqualTo(1);
+	}
+	
+	public void updateProductTest() {
+
+		Product prod = new Product(1L,"Earbuds",2500L);
+		productRepo.save(prod);
+		Product prod1 = productRepo.findById(1L).get();
+		
+		prod1.setProductName("One Plus");
+		Product updatedProduct = productRepo.save(prod1);
+		Assertions.assertThat(updatedProduct.getProductName()).isEqualTo("One Plus");
+	}
+	
+	
+	public void deleteProductTest() {
+
+		Product prod = new Product(1L,"Earbuds",2500L);
+		productRepo.save(prod);
+		Product prod1 = productRepo.findById(1L).get();
+		
+		productRepo.delete(prod1);
+		Product prod2 = null;
+		Optional<Product> oProd = productRepo.findById(1L);
+		if(oProd.isPresent()) {
+			prod2 = oProd.get();
+		}
+		
+		Assertions.assertThat(prod2).isNull();
+	}
+	
+	
+}

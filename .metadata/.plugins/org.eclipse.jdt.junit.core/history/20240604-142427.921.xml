@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun ProductAppRepoTest" project="ProductManagement" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.product.ProductAppRepoTest" time="0.686" displayname="ProductAppRepoTest" uniqueid="[engine:junit-jupiter]/[class:com.product.ProductAppRepoTest]">
+    <testcase name="saveProductTest" classname="com.product.ProductAppRepoTest" time="0.601" displayname="saveProductTest()" uniqueid="[engine:junit-jupiter]/[class:com.product.ProductAppRepoTest]/[method:saveProductTest()]"/>
+    <testcase name="getProductTest" classname="com.product.ProductAppRepoTest" time="0.017" displayname="getProductTest()" uniqueid="[engine:junit-jupiter]/[class:com.product.ProductAppRepoTest]/[method:getProductTest()]"/>
+    <testcase name="updateProductTest" classname="com.product.ProductAppRepoTest" time="0.016" displayname="updateProductTest()" uniqueid="[engine:junit-jupiter]/[class:com.product.ProductAppRepoTest]/[method:updateProductTest()]"/>
+    <testcase name="deleteProductTest" classname="com.product.ProductAppRepoTest" time="0.052" displayname="deleteProductTest()" uniqueid="[engine:junit-jupiter]/[class:com.product.ProductAppRepoTest]/[method:deleteProductTest()]"/>
+  </testsuite>
+</testrun>

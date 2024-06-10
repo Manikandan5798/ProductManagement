@@ -1,0 +1,49 @@
+package com.product.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.product.model.Product;
+import com.product.repository.ProductRepo;
+
+@Service
+public class ProductServices {
+
+	@Autowired
+	public ProductRepo productRepo;
+	
+	
+	public Product saveProduct(Product product) {
+		
+		return productRepo.save(product);
+	}
+
+	public Product fetchBikeById(Long id) {
+		
+		Optional<Product> product =
+                productRepo.findById(id);
+
+        if(!bike.isPresent()) {
+            throw new BikeNotFoundException("Bike", "Id", id);
+        }
+
+        return  bike.get();
+	}
+	}
+
+	public void deleteProductById(Long id) {
+		
+		
+	}
+
+	public Product updateProductDetails(Product product, Long id) {
+		
+		return null;
+	}
+
+	public Product fetchAllProduct() {
+		
+		return null;
+	}
+
+}
